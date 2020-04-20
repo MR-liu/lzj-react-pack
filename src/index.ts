@@ -9,13 +9,53 @@ class LzjReactPack extends Command {
   static args = [{ name: 'file' }]
 
   async run() {
-    // const {args, flags} = this.parse(LzjReactPack)
-    // const name = flags.name || 'world'
-    // this.log(`hello ${name} from ./src/index.ts`)
-    // if (args.file && flags.force) {
-    //   this.log(`you input --force and --file: ${args.file}`)
-    // }
+    const { args, flags } = this.parse(LzjReactPack)
+    const { staged, ...rest } = flags
+    const { dir } = args
+
+    console.warn(staged, rest, dir)
   }
+
+  // async lint(flags: any) {
+  //   const { dir, cwd, prettier, eslint, fix, format } = flags
+  //   if (dir === undefined) {
+  //     this.error('please specify a path to lint')
+  //   }
+  //   // 支持多路径，以逗号分隔
+  //   let filePath: any
+
+  //   if (dir.split(',').length !== 0) {    // eslint-disable-line
+  //     filePath = dir.split(',')
+  //   } else {
+  //     filePath = dir
+  //   }
+
+  //   const allFiles = getFiles(filePath, cwd)
+  //   try {
+  //     if (eslint) {
+  //       getEslintConfig()
+  //       const eslintExtensions = ['.js', '.jsx', '.ts', '.tsx']
+  //       const files = allFiles.filter(item => endsWithArray(item, eslintExtensions))
+  //       if (files.length > 0) {
+  //         let args = fix ? ['--fix', ...files] : [...files] // eslint-disable-line
+  //         args = format !== 'stylish' ? ['-f', format, ...args] : [...args] // eslint-disable-line
+  //         spawn.sync(eslintPath, args, {stdio: 'inherit'})
+  //       }
+  //     }
+
+  //     if (prettier) {
+  //       const prettierExtensions = ['.js', '.jsx', '.ts', '.tsx', '.css', '.less', '.scss', '.sass']
+  //       const files = allFiles.filter(item =>
+  //         endsWithArray(item, prettierExtensions),
+  //       )
+  //       if (files.length > 0) {
+  //         spawn.sync(prettierPath, ['--write', ...files], {stdio: 'inherit'})
+  //       }
+  //     }
+  //   } catch (error) {
+  //     this.error(error)
+  //   }
+  // }
 }
 
 export = LzjReactPack
