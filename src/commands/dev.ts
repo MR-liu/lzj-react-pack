@@ -20,6 +20,7 @@ export default class dev extends Command {
 
 
   async run() {
+    let i = 1
     const {args, flags} = this.parse(dev)
 
     console.log(args, flags, this.parse(dev));
