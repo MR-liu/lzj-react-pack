@@ -55,8 +55,8 @@
       "git add"
     ],
     "src/**/*.ts": [
-      "eslint --fix --ext .ts",
       "prettier --write",
+      "eslint --fix --ext .ts",
       "git add"
     ]
   },
