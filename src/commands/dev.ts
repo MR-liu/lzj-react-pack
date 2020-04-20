@@ -18,6 +18,7 @@ export default class dev extends Command {
 
   static args = [{name: 'mode'}, {name: 'task'}]
 
+
   async run() {
     const {args, flags} = this.parse(dev)
 
