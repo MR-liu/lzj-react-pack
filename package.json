@@ -66,7 +66,7 @@
   "types": "lib/index.d.ts",
   "lint-staged": {
     "**/*.js": "eslint --ext .js",
-    "**/*.vue": "eslint --ext .vue"
+    "**/*.ts": "eslint --ext .ts"
   },
   "husky": {
     "hooks": {
