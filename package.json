@@ -65,10 +65,8 @@
   },
   "types": "lib/index.d.ts",
   "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix --ext .js",
-      "prettier --write"
-    ]
+    "**/*.js": "eslint --ext .js",
+    "**/*.vue": "eslint --ext .vue"
   },
   "husky": {
     "hooks": {
