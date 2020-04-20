@@ -1,12 +1,12 @@
-import { Command } from "@oclif/command";
-import option from "./utils/option";
+import { Command } from '@oclif/command'
+import option from './utils/option'
 
 class LzjReactPack extends Command {
-  static description = "describe the command here";
+  static description = 'describe the command here'
 
-  static flags = option;
+  static flags = option
 
-  static args = [{ name: "file" }];
+  static args = [{ name: 'file' }]
 
   async run() {
     // const {args, flags} = this.parse(LzjReactPack)
@@ -18,4 +18,4 @@ class LzjReactPack extends Command {
   }
 }
 
-export = LzjReactPack;
+export = LzjReactPack

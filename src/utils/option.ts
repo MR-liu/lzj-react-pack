@@ -1,36 +1,36 @@
-import { flags } from "@oclif/command";
+import { flags } from '@oclif/command'
 
 const flagConfig = {
   staged: flags.boolean({
-    char: "S",
+    char: 'S',
     default: false,
-    description: "only lint git staged files",
+    description: 'only lint git staged files',
   }),
   prettier: flags.boolean({
-    char: "P",
+    char: 'P',
     default: false,
-    description: "format code with prettier",
+    description: 'format code with prettier',
   }),
   eslint: flags.boolean({
-    char: "e",
+    char: 'e',
     default: false,
-    description: "enabel lint javascript",
+    description: 'enabel lint javascript',
   }),
   fix: flags.boolean({
-    char: "f",
+    char: 'f',
     default: false,
-    description: "fix all eslint and stylelint auto-fixable problems",
+    description: 'fix all eslint and stylelint auto-fixable problems',
   }),
   cwd: flags.string({
-    char: "c",
+    char: 'c',
     default: process.cwd(),
-    description: "current working directory",
+    description: 'current working directory',
   }),
   format: flags.string({
-    char: "F",
-    default: "stylish",
-    description: "output format of console",
+    char: 'F',
+    default: 'stylish',
+    description: 'output format of console',
   }),
-};
+}
 
-export default flagConfig;
+export default flagConfig
