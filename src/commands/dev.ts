@@ -1,6 +1,6 @@
 import {Command, flags} from '@oclif/command'
 
-export default class Hello extends Command {
+export default class dev extends Command {
   static description = 'dev'
 
   static examples = [
@@ -16,15 +16,17 @@ export default class Hello extends Command {
     force: flags.boolean({char: 'f'}),
   }
 
-  static args = [{name: 'file'}]
+  static args = [{name: 'mode'}, {name: 'task'}]
 
   async run() {
-    const {args, flags} = this.parse(Hello)
+    const {args, flags} = this.parse(dev)
 
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from ./src/commands/hello.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    console.log(args, flags, this.parse(dev));
+
+    // const name = flags.name || 'world'
+    // this.log(`hello ${name} from ./src/commands/hello.ts`)
+    // if (args.file && flags.force) {
+    //   this.log(`you input --force and --file: ${args.file}`)
+    // }
   }
 }
