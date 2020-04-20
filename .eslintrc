@@ -2,8 +2,5 @@
   "extends": [
     "oclif",
     "oclif-typescript"
-  ],
-  "rules": {
-    "no-console": ["error", { "allow": ["warn", "error"] }]
-  }
+  ]
 }
