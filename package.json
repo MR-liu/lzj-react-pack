@@ -1,6 +1,6 @@
 {
   "name": "lzj-react-pack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "刘泽锦",
   "bin": {
     "lzj-react-pack": "./bin/run"

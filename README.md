@@ -19,7 +19,7 @@ $ npm install -g lzj-react-pack
 $ lzj-react-pack COMMAND
 running command...
 $ lzj-react-pack (-v|--version|version)
-lzj-react-pack/0.0.0 darwin-x64 node-v12.9.1
+lzj-react-pack/0.0.1 darwin-x64 node-v12.9.1
 $ lzj-react-pack --help [COMMAND]
 USAGE
   $ lzj-react-pack COMMAND
