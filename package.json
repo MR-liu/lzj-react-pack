@@ -1,6 +1,6 @@
 {
   "name": "lzj-react-pack",
-  "version": "0.0.1",
+  "version": "0.0.2-beta4",
   "author": "刘泽锦",
   "bin": {
     "lzj-react-pack": "./bin/run"
@@ -10,6 +10,9 @@
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^2.2.3",
+    "chalk": "^4.0.0",
+    "clear": "^0.1.0",
+    "lzj-pack": "0.0.7",
     "tslib": "^1.11.1"
   },
   "devDependencies": {

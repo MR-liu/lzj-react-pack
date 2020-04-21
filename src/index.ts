@@ -1,19 +1,53 @@
+const chalk = require('chalk')
+const clear = require('clear')
+
 import { Command } from '@oclif/command'
 import option from './utils/option'
 
 class LzjReactPack extends Command {
-  static description = 'describe the command here'
+  static description = 'lzj-react-cli工具'
 
   static flags = option
 
-  static args = [{ name: 'file' }]
+  static args = [{ name: 'port' }]
+
+  static pwd = process.cwd()
 
   async run() {
-    const { args, flags } = this.parse(LzjReactPack)
-    const { staged, ...rest } = flags
-    const { dir } = args
+    const { flags } = this.parse(LzjReactPack)
+    const { init, build, dev } = flags
 
-    console.warn(staged, rest, dir)
+    switch (true) {
+    case build:
+      this.build()
+      return
+
+    case dev:
+      this.dev()
+      break
+
+    case init:
+      this.initbase()
+      break
+
+    default:
+      clear()
+      console.warn(chalk.yellow('lzj-react-pack --help进行查看帮助'))
+      break
+    }
+  }
+
+  async build() {
+    console.warn('build')
+  }
+
+  async dev() {
+    require(`${process.cwd()}/node_modules/lzj-pack/services/server.js`)({ port: 8080 })
+    console.warn('dev')
+  }
+
+  async initbase() {
+    console.warn('init')
   }
 
   // async lint(flags: any) {

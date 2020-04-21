@@ -2,16 +2,18 @@ import { Command } from '@oclif/command';
 declare class LzjReactPack extends Command {
     static description: string;
     static flags: {
-        staged: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-        prettier: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-        eslint: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-        fix: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-        cwd: import("@oclif/command/lib/flags").IOptionFlag<string>;
-        format: import("@oclif/command/lib/flags").IOptionFlag<string>;
+        dev: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+        build: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+        init: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+        help: import("@oclif/parser/lib/flags").IBooleanFlag<void>;
     };
     static args: {
         name: string;
     }[];
+    static pwd: string;
     run(): Promise<void>;
+    build(): Promise<void>;
+    dev(): Promise<void>;
+    initbase(): Promise<void>;
 }
 export = LzjReactPack;

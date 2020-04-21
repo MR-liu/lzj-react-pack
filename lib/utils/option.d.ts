@@ -1,10 +1,7 @@
-import { flags } from '@oclif/command';
-declare const flagConfig: {
-    staged: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-    prettier: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-    eslint: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-    fix: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
-    cwd: flags.IOptionFlag<string>;
-    format: flags.IOptionFlag<string>;
+declare const flagOption: {
+    dev: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+    build: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+    init: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+    help: import("@oclif/parser/lib/flags").IBooleanFlag<void>;
 };
-export default flagConfig;
+export default flagOption;

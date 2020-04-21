@@ -1,36 +1,22 @@
 import { flags } from '@oclif/command'
 
-const flagConfig = {
-  staged: flags.boolean({
-    char: 'S',
+const flagOption = {
+  dev: flags.boolean({
+    char: 'D',
     default: false,
-    description: 'only lint git staged files',
+    description: '运行本地环境',
   }),
-  prettier: flags.boolean({
-    char: 'P',
+  build: flags.boolean({
+    char: 'B',
     default: false,
-    description: 'format code with prettier',
+    description: 'build本地代码',
   }),
-  eslint: flags.boolean({
-    char: 'e',
+  init: flags.boolean({
+    char: 'I',
     default: false,
-    description: 'enabel lint javascript',
+    description: '初始化代码',
   }),
-  fix: flags.boolean({
-    char: 'f',
-    default: false,
-    description: 'fix all eslint and stylelint auto-fixable problems',
-  }),
-  cwd: flags.string({
-    char: 'c',
-    default: process.cwd(),
-    description: 'current working directory',
-  }),
-  format: flags.string({
-    char: 'F',
-    default: 'stylish',
-    description: 'output format of console',
-  }),
+  help: flags.help(),
 }
 
-export default flagConfig
+export default flagOption
