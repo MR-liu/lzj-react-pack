@@ -12,7 +12,7 @@
     "@oclif/plugin-help": "^2.2.3",
     "chalk": "^4.0.0",
     "clear": "^0.1.0",
-    "lzj-pack": "0.0.7",
+    "lzj-pack": "0.1.4-alpha.0",
     "tslib": "^1.11.1"
   },
   "devDependencies": {
